@@ -1,8 +1,8 @@
 /*
-This is the NFT for the lease agreement.
+This is the NFT lease agreement payment facility.
 This NFT will be a nested NFT to:
-    [] Hold the lease documentation
-    [] Facilitate funds transfers from leasee to property owner
+    [x] Hold the lease documentation
+    [x] Facilitate funds transfers from leasee to property owner
 */
 
 pragma solidity ^0.8.1;
@@ -105,10 +105,5 @@ contract Payment_Facility is ERC721 {
     function onERC721Received(address, address, uint256, bytes calldata) external pure returns (bytes4) {
         return IERC721Receiver.onERC721Received.selector;
     }
-
-    function _finalMonth() internal {
-        if(rentDepositPaid == true ){
-
-        }
-    }
+    
 }
